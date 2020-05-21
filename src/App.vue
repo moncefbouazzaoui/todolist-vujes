@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!--<div class="container">-->
+      <!--<AddTodo />-->
+      <!--<FilterTodos />-->
+      <!--<Todos />-->
+    <!--</div>-->
+    <section class="todoapp">
+      <Header />
+      <Todos />
+      <Footer />
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import  './assets/style.css';
+import Todos from './components/Todos.vue';
+import Header from './components/layout/Header.vue';
+import Footer from './components/layout/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+      Todos,
+      Header,
+      Footer
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
